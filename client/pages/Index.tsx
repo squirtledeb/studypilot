@@ -82,8 +82,17 @@ const HeroSection = () => (
     id="hero"
     className="min-h-screen flex items-center justify-center relative bg-[url('/hero-bg.png')] bg-cover bg-center bg-no-repeat"
   >
+    {/* Vignette effect: darker blackberry bliss on the sides */}
+    <div
+      className="absolute inset-0 pointer-events-none z-10"
+      style={{
+        background:
+          "radial-gradient(ellipse at center, rgba(255,255,255,0) 60%, rgba(75,22,76,0.25) 100%)"
+      }}
+    ></div>
+    {/* White overlay for text readability */}
     <div className="absolute inset-0 bg-white/80 pointer-events-none z-0"></div>
-    <div className="container mx-auto px-4 sm:px-6 relative z-10">
+    <div className="container mx-auto px-4 sm:px-6 relative z-20">
       <div className="flex flex-col items-center justify-center text-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
