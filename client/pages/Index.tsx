@@ -265,6 +265,7 @@ const ServicesSection = () => {
       subjects: [
         "Mathematics",
         "Science",
+        "English",
       ],
     },
     {
@@ -276,6 +277,7 @@ const ServicesSection = () => {
         "All Physics Courses",
         "All Chemistry Courses",
         "All Computer Science Courses",
+        "Data mangement",
       ],
     },
     {
@@ -473,7 +475,7 @@ const ContactSection = () => (
               className="inline-flex items-center space-x-3 bg-white text-primary px-8 py-4 rounded-lg font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Phone className="w-6 h-6" />
-              <span>(123) 456-7890</span>
+              <span>416-931-5592</span>
             </a>
           </motion.div>
 
