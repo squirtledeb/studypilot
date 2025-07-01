@@ -78,13 +78,12 @@ const PulseButton = ({
 );
 
 const HeroSection = () => (
-  <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-emerald-50 via-white to-emerald-100">
-    <div
-      className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMxMGI5ODEiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-50"
-      style={{ top: "34px" }}
-    />
-
-    <div className="container mx-auto px-6 relative z-10">
+  <section
+    id="hero"
+    className="min-h-screen flex items-center justify-center relative bg-[url('/hero-bg.png')] bg-cover bg-center bg-no-repeat"
+  >
+    <div className="absolute inset-0 bg-white/80 pointer-events-none z-0"></div>
+    <div className="container mx-auto px-4 sm:px-6 relative z-10">
       <div className="flex flex-col items-center justify-center text-center min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -98,20 +97,20 @@ const HeroSection = () => (
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-center"
           >
-            <h1 className="text-7xl font-bold text-gray-900 mb-4">StudyPilot</h1>
-            <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-emerald-400 sm:text-4xl md:text-5xl mb-4">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-4">StudyPilot</h1>
+            <p className="text-xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70 mb-4">
               Unlock Your Full Academic Potential
             </p>
-            <p className="text-4xl font-semibold text-gray-700 sm:text-5xl mb-6">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 mb-6">
               With a tutor that cares
             </p>
-            <p className="mx-auto max-w-3xl text-lg text-gray-500 mb-12 leading-relaxed">
+            <p className="mx-auto max-w-xs sm:max-w-2xl text-base sm:text-lg text-gray-500 mb-8 sm:mb-12 leading-relaxed">
               Expert tutor in{' '}
               <span className="relative inline-block align-baseline">
                 20+ subjects
                 <svg
                   viewBox="0 0 110 8"
-                  width="110"
+                  width="90"
                   height="8"
                   className="absolute left-0 w-full h-2 bottom-[-2px]"
                   aria-hidden="true"
@@ -119,7 +118,7 @@ const HeroSection = () => (
                   <line x1="0" y1="6" x2="110" y2="6" stroke="#e3342f" strokeWidth="4" strokeLinecap="round" />
                 </svg>
               </span>{' '}
-              <br />
+              <br className="hidden sm:block" />
               1-on-1 lessons tailored to how you learn best — no cookie-cutter teaching here.
             </p>
           </motion.div>
@@ -128,7 +127,7 @@ const HeroSection = () => (
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex justify-center mb-16"
+            className="flex justify-center mb-10 sm:mb-16"
           >
             <DiscoverButton />
           </motion.div>
@@ -140,7 +139,7 @@ const HeroSection = () => (
           transition={{ duration: 1, delay: 1.2 }}
           className="w-full flex justify-center"
         >
-          <div className="flex justify-center items-center space-x-8 text-emerald-600">
+          <div className="flex justify-center items-center space-x-8 text-primary">
             <div className="flex items-center space-x-2"></div>
             <div className="flex items-center space-x-2"></div>
             <div className="flex items-center space-x-2"></div>
@@ -157,7 +156,7 @@ const AboutSection = () => (
       <AnimatedSection>
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Meet Your <span className="text-emerald-600">Dedicated Tutor</span>
+            Meet Your <span className="text-primary">Dedicated Tutor</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Run by experienced educators who understand the Ontario curriculum
@@ -166,46 +165,46 @@ const AboutSection = () => (
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="overflow-hidden shadow-xl border-0 bg-gradient-to-br from-emerald-50 to-white">
-            <CardContent className="p-6 md:p-8">
-              <div className="grid md:grid-cols-2 gap-6 items-center mb-6">
+          <Card className="overflow-hidden shadow-xl border-0 bg-gradient-to-br from-primary/10 to-white">
+            <CardContent className="p-4 sm:p-6 md:p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center mb-6">
                 <div>
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="w-40 h-40 mx-auto bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center shadow-2xl"
+                    className="w-32 h-32 sm:w-40 sm:h-40 mx-auto bg-gradient-to-br from-primary/70 to-primary rounded-full flex items-center justify-center shadow-2xl"
                   >
                     <img
                       src="/profile.jpg"
                       alt="Profile"
-                      className="w-32 h-32 object-cover rounded-full border-4 border-white shadow-lg"
+                      className="w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-full border-4 border-white shadow-lg"
                     />
                   </motion.div>
                 </div>
 
-                <div className="text-left">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                    Kian Shahbaz
+                <div className="text-left mt-6 md:mt-0">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
+                    Kian
                   </h3>
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center justify-start space-x-3">
-                      <BookOpen className="w-6 h-6 text-emerald-600" />
-                      <span className="text-gray-700 text-lg">
+                      <BookOpen className="w-6 h-6 text-primary" />
+                      <span className="text-gray-700 text-base sm:text-lg">
                         TMU Software Engineering Graduate
                       </span>
                     </div>
                     <div className="flex items-center justify-start space-x-3">
-                      <Star className="w-6 h-6 text-emerald-600" />
-                      <span className="text-gray-700 text-lg">GPA 3.85</span>
+                      <Star className="w-6 h-6 text-primary" />
+                      <span className="text-gray-700 text-base sm:text-lg">GPA 3.85</span>
                     </div>
                     <div className="flex items-center justify-start space-x-3">
-                      <Clock className="w-6 h-6 text-emerald-600" />
-                      <span className="text-gray-700 text-lg">
+                      <Clock className="w-6 h-6 text-primary" />
+                      <span className="text-gray-700 text-base sm:text-lg">
                         3000+ Tutoring Hours
                       </span>
                     </div>
                     <div className="flex items-center justify-start space-x-3">
-                      <Users className="w-6 h-6 text-emerald-600" />
-                      <span className="text-gray-700 text-lg">
+                      <Users className="w-6 h-6 text-primary" />
+                      <span className="text-gray-700 text-base sm:text-lg">
                         20+ Subjects Expertise
                       </span>
                     </div>
@@ -214,10 +213,10 @@ const AboutSection = () => (
               </div>
               
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 text-center">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 text-center">
                   About Me
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-left text-sm">
+                <p className="text-gray-600 leading-relaxed text-left text-sm sm:text-base">
                   My name is Kian. I am a TMU Software Engineering Bachelor
                   graduate with a cumulative GPA of 3.85. I have over 10
                   years of experience in Tutoring. I have tutored students
@@ -230,11 +229,11 @@ const AboutSection = () => (
                 </p>
               </div>
               
-              <div className="bg-emerald-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-emerald-700 mb-3 text-center">
+              <div className="bg-primary/10 p-4 sm:p-6 rounded-lg">
+                <h3 className="text-lg sm:text-xl font-bold text-primary mb-3 text-center">
                   Our Philosophy
                 </h3>
-                <p className="text-emerald-800 leading-relaxed text-center text-sm">
+                <p className="text-primary/80 leading-relaxed text-center text-sm sm:text-base">
                   "Every student learns differently. That's why we create
                   personalized learning experiences that adapt to your unique
                   style, pace, and goals."
@@ -289,14 +288,14 @@ const ServicesSection = () => {
         <AnimatedSection>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              <span className="text-emerald-600">The courses I cover:</span>
+              <span className="text-primary">The courses I cover:</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Proven results in weeks, not semesters
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -309,18 +308,18 @@ const ServicesSection = () => {
                 <Card className="h-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-0">
                   <CardContent className="p-8">
                     <div className="text-center">
-                      <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center">
+                      <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-primary/70 to-primary rounded-full flex items-center justify-center">
                         <service.icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-4">
                         {service.title}
                       </h3>
-                      <p className="mb-4 font-semibold text-emerald-700 text-lg">
+                      <p className="mb-4 font-semibold text-primary text-lg">
                         {service.tagline}
                       </p>
                       <ul className="text-left mx-auto max-w-xs space-y-2">
                         {service.subjects.map((subject, subIndex) => (
-                          <li key={subIndex} className="text-emerald-700 font-medium pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-emerald-400">
+                          <li key={subIndex} className="text-primary font-medium pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-primary/60">
                             {subject}
                           </li>
                         ))}
@@ -340,41 +339,32 @@ const ServicesSection = () => {
 const ResultsSection = () => {
   const testimonials = [
     {
-      name: "Student A",
-      grade: "Grade X",
-      subject: "Subject",
-      improvement: "From XX% to YY%",
+      name: "Student",
       quote:
-        "This is a sample testimonial. The tutor's teaching style made a big difference!",
+        "Kian was incredibly helpful and supportive throughout the semester. With his guidance, I scored 100% on my culminating project and 99% on my math exam! He explains concepts clearly, is easy to work with, and genuinely cares about your success. I couldn't have asked for a better tutor!",
       rating: 5,
     },
     {
-      name: "Student B",
-      grade: "Grade Y",
-      subject: "Subject",
-      improvement: "From XX% to YY%",
+      name: "Parent of Student",
       quote:
-        "Another sample testimonial. I actually understand the concepts now!",
+        "Kian is an excellent tutor — knowledgeable, reliable, and genuinely caring. We truly appreciate his guidance and flexibility. He always ensures sessions are tailored to our child's needs, even adjusting the schedule to help her prepare for tests. His support has made a noticeable difference in her learning, and we're grateful for his dedication. Highly recommended!",
       rating: 5,
     },
     {
-      name: "Student C",
-      grade: "Grade Z",
-      subject: "Subject",
-      improvement: "From XX% to YY%",
+      name: "Parent of Student",
       quote:
-        "My skills improved dramatically. The tutor taught me how to think critically!",
+        "Kian has been an incredible help! My child had a few major breakthroughs in understanding key concepts, all thanks to his guidance and support. He's not only knowledgeable, but also encouraging and positive — which made a huge difference in building confidence. We're so grateful for his efforts and highly recommend him to anyone looking for a dedicated and effective tutor.",
       rating: 5,
     },
   ];
 
   return (
-    <section id="results" className="pt-28 pb-20 bg-white">
+    <section id="results" className="pt-24 pb-20 bg-white">
       <div className="container mx-auto px-6">
         <AnimatedSection>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              <span className="text-emerald-600">Proven Results</span> That
+              <span className="text-primary">Proven Results</span> That
               Speak Volumes
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -382,7 +372,7 @@ const ResultsSection = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -392,7 +382,7 @@ const ResultsSection = () => {
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
               >
-                <Card className="h-full bg-gradient-to-br from-emerald-50 to-white shadow-lg hover:shadow-xl transition-all duration-300 border-emerald-100">
+                <Card className="h-full bg-gradient-to-br from-primary/10 to-white shadow-lg hover:shadow-xl transition-all duration-300 border-primary/10">
                   <CardContent className="p-8 flex flex-col h-full">
                     <div className="text-center mb-6">
                       <div className="flex justify-center mb-4">
@@ -403,12 +393,6 @@ const ResultsSection = () => {
                           />
                         ))}
                       </div>
-                      <div className="text-3xl font-bold text-emerald-600 mb-2">
-                        {testimonial.improvement}
-                      </div>
-                      <div className="text-gray-500 text-sm">
-                        in {testimonial.subject}
-                      </div>
                     </div>
                     <blockquote className="text-gray-700 italic mb-6 leading-relaxed">
                       "{testimonial.quote}"
@@ -416,9 +400,6 @@ const ResultsSection = () => {
                     <div className="text-center mt-auto">
                       <div className="font-semibold text-gray-900">
                         {testimonial.name}
-                      </div>
-                      <div className="text-gray-500 text-sm">
-                        {testimonial.grade}
                       </div>
                     </div>
                   </CardContent>
@@ -430,25 +411,25 @@ const ResultsSection = () => {
           <div className="text-center">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
               <div>
-                <div className="text-4xl font-bold text-emerald-600 mb-2">
+                <div className="text-4xl font-bold text-primary mb-2">
                   98%
                 </div>
                 <div className="text-gray-600">Grade Improvement</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-emerald-600 mb-2">
+                <div className="text-4xl font-bold text-primary mb-2">
                   3000+
                 </div>
                 <div className="text-gray-600">Tutoring Hours</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-emerald-600 mb-2">
+                <div className="text-4xl font-bold text-primary mb-2">
                   20+
                 </div>
                 <div className="text-gray-600">Subjects Covered</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-emerald-600 mb-2">
+                <div className="text-4xl font-bold text-primary mb-2">
                   100%
                 </div>
                 <div className="text-gray-600">Student Satisfaction</div>
@@ -480,7 +461,7 @@ const ContactSection = () => (
           >
             <a
               href="tel:+1234567890"
-              className="inline-flex items-center space-x-3 bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="inline-flex items-center space-x-3 bg-white text-primary px-8 py-4 rounded-lg font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Phone className="w-6 h-6" />
               <span>(123) 456-7890</span>
@@ -488,7 +469,7 @@ const ContactSection = () => (
           </motion.div>
 
           <div className="mt-8 text-center opacity-75">
-            <p className="text-lg">Available Monday - Friday, 9 AM - 9 PM</p>
+            <p className="text-lg">Available Monday to Friday, 9 AM – 9 PM EST</p>
           </div>
         </div>
       </AnimatedSection>
@@ -497,10 +478,10 @@ const ContactSection = () => (
 );
 
 const Footer = () => (
-  <footer className="bg-gray-900 text-white py-8">
+  <footer className="bg-gray-900 text-white py-8 text-center text-sm sm:text-base">
     <div className="container mx-auto px-6">
       <div className="text-center">
-        <h3 className="text-2xl font-bold mb-4 text-emerald-400">StudyPilot</h3>
+        <h3 className="text-2xl font-bold mb-4 text-primary/70">StudyPilot</h3>
         <p className="text-gray-400 mb-4">
           Unlock Your Full Academic Potential
         </p>

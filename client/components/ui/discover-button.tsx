@@ -17,8 +17,8 @@ const DiscoverButton = ({
   return (
     <button
       onClick={handleClick}
-      className="discover-button flex items-center justify-center px-8 py-4 border-8 border-blue-200 text-white gap-2 rounded-full cursor-pointer transition-all duration-300 hover:border-blue-300 active:border-4"
-      style={{ backgroundColor: "#35d299", margin: "-4px 0" }}
+      className="discover-button flex items-center justify-center px-8 py-4 border-8 border-gray-200 text-white gap-2 rounded-full cursor-pointer transition-all duration-300 hover:border-gray-300 active:border-4 bg-primary"
+      style={{ margin: "-4px 0" }}
     >
       <span className="text-xl font-bold tracking-wide">{children}</span>
       <span className="pt-1.5 h-full w-fit">
