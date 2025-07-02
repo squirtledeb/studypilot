@@ -277,7 +277,7 @@ const ServicesSection = () => {
         "All Physics Courses",
         "All Chemistry Courses",
         "All Computer Science Courses",
-        "Data mangement",
+        "All Data mangement Courses",
       ],
     },
     {
