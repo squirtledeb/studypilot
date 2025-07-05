@@ -106,4 +106,4 @@ npm start
 ## License
 
 This project is provided as-is for client use.  
-For questions or support, contact your developer. 
+For questions or support, contact OceanTide @freelancer.oceantideco@gmail.com. 
